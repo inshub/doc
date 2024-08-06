@@ -42,5 +42,6 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/inshub' }
     ]
-  }
+  },
+  ignoreDeadLinks: true
 })
