@@ -1,8 +1,26 @@
-# Kubectl常用命令
+# k8s常用命令
 
 
-### 常用命令
+#### kubeadm常用命令
 ```
+kubeadm init 启动一个 Kubernetes 主节点
+kubeadm join 启动一个 Kubernetes 工作节点并且将其加入到集群
+kubeadm upgrade 更新一个 Kubernetes 集群到新版本
+kubeadm config 如果你使用 kubeadm v1.7.x 或者更低版本，你需要对你的集群做一些配置以便使用 kubeadm upgrade 命令
+kubeadm token 使用 kubeadm join 来管理令牌
+kubeadm reset 还原之前使用 kubeadm init 或者 kubeadm join 对节点产生的改变
+kubeadm version 打印出 kubeadm 版本
+kubeadm alpha 预览一组可用的新功能以便从社区搜集反馈
+
+```
+
+### kubectl常用命令
+```
+
+清理Evicted状态pod
+for i in `kubectl get pods -n test |grep -i Evicted|awk '{print $1}'`;do echo $i;kubectl delete pods -n test $i;done
+
+
 创建一个pod
 kubectl run nginx --image=nginx
 创建一个deployment
@@ -62,8 +80,9 @@ nodefs就是指kubernetes node节点的根目录吧，即文件系统的/目录�
 - 参数默认值
 ```
 --eviction-hard strings     默认值：imagefs.available<15%,memory.available<100Mi,nodefs.available<10%
-触发 Pod 驱逐操作的一组硬性门限（例如：memory.available<1Gi （内存可用值小于 1G）设置。在 Linux 节点上，默认值还包括 nodefs.inodesFree<5%。 （已弃用：应在 --config 所给的配置文件中进行设置。 请参阅 kubelet-config-file 了解更多信息。）
-
+触发 Pod 驱逐操作的一组硬性门限（例如：memory.available<1Gi （内存可用值小于 1G）设置。
+在 Linux 节点上，默认值还包括 nodefs.inodesFree<5%。
+（已弃用：应在 --config 所给的配置文件中进行设置。 请参阅 kubelet-config-file 了解更多信息。）
 ```
 
 ### 参考地址
