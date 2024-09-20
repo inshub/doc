@@ -221,6 +221,12 @@ https://www.iconfont.cn/  <br/>
 https://icones.js.org/
 
 
+
+### 问题汇总
+`[plugin:vite:vue] Element is missing end tag.`
+如果文章中包含html元素标签，可能会提示如上错误。搜索<标签去除或者增加代码语法。
+
+
 ### 参考地址
 https://www.builtatlightspeed.com/category/vitepress <br/>
 https://github.com/Charles7c/charles7c.github.io <br/>

@@ -1,8 +1,8 @@
-# DockerHub镜像无法下载的多种解决方案
+# Docker Hub加速镜像
 `hub.docker.com`和国内几家Docker Hub镜像服务平台陆续下架，停止服务。
 给使用的同学造成非常大的困扰。
-汇总了几种目前有效的解决方案，希望能帮助到大家。
-因为有些链接有时效性，可以关注文中链接的issue。(2024年6月18日测试可用)
+DockerHub镜像无法下载的多种解决方案，汇总了几种目前有效的解决方案，希望能帮助到大家。
+因为有些链接有时效性，可以关注文中链接的issue。(2024年8月3日测试可用)
 
 ### Docker镜像加速站
 为了加速镜像拉取，使用以下命令设置registry mirror
@@ -13,9 +13,7 @@ sudo tee /etc/docker/daemon.json <<EOF
 {
     "registry-mirrors": [
         "https://docker.anyhub.us.kg",
-        "https://dockerhub.jobcher.com",
         "https://dockerhub.icu",
-        "https://docker.ckyl.me",
         "https://docker.awsl9527.cn"
     ]
 }
@@ -27,13 +25,15 @@ sudo systemctl restart docker
 
 ### DockerHub Proxy站点
 ```
-https://registry.devops-engineer.com.cn/
+https://registry.devops-engineer.com.cn/ 【推荐】
 
-https://docker.1panel.live/
-https://docker.anyhub.us.kg/
+https://dockerhub.icu/ 【可用】
 https://docker.awsl9527.cn/
-https://dockerhub.icu/
-https://hub.uuuadc.top[失效]
+https://docker.1panel.live/ 【可用】
+https://docker.ckyl.me 【失效】
+https://hub.uuuadc.top 【失效】
+https://dockerhub.jobcher.com【失效】
+https://docker.anyhub.us.kg/ 【失效】
 ```
 
 ### AtomHub
