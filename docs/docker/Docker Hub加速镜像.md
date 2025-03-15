@@ -2,7 +2,26 @@
 `hub.docker.com`和国内几家Docker Hub镜像服务平台陆续下架，停止服务。
 给使用的同学造成非常大的困扰。
 DockerHub镜像无法下载的多种解决方案，汇总了几种目前有效的解决方案，希望能帮助到大家。
-因为有些链接有时效性，可以关注文中链接的issue。(2024年8月3日测试可用)
+因为有些链接有时效性，可以关注文中链接的issue。
+
+### 加速镜像列表【2024年11月28日亲测有效】
+
+|DockerHub镜像仓库  |镜像加速器地址|
+| ---- | ---- |
+|Docker Proxy 镜像加速|https://dockerpull.org|
+|毫秒镜像|docker.1ms.run|
+|镜像加速说明|https://docker.1panel.dev|
+|镜像加速说明|https://docker.foreverlink.love|
+|Docker Hub Container Image Library|https://docker.fxxk.dedyn.io|
+|Dockerhub 镜像加速说明|https://docker.xn--6oq72ry9d5zx.cn|
+|Dockerhub 镜像加速说明|https://docker.zhai.cm|
+|Dockerhub 镜像加速说明|https://docker.5z5f.com|
+|Dockerhub 镜像加速说明|https://a.ussh.net|
+|Docker Layer ICU 镜像加速|https://docker.cloudlayer.icu|
+|链氪镜像-链氪网公益 Docker 镜像站-Docker-DockerHub 国内镜像源加速｜链氪巴士|https://docker.linkedbus.com|
+|AtomHub 可信镜像仓库平台（只包含基础镜像，共 336 个）|https://atomhub.openatom.cn|
+|DaoCloud 镜像站|https://docker.m.daocloud.io|
+
 
 ### Docker镜像加速站
 为了加速镜像拉取，使用以下命令设置registry mirror
@@ -26,10 +45,11 @@ sudo systemctl restart docker
 ### DockerHub Proxy站点
 ```
 https://registry.devops-engineer.com.cn/ 【推荐】
-
-https://dockerhub.icu/ 【可用】
-https://docker.awsl9527.cn/
+https://docker.cloudlayer.icu 【可用】
 https://docker.1panel.live/ 【可用】
+
+https://docker.awsl9527.cn/ 【失效】
+https://dockerhub.icu/ 【失效】
 https://docker.ckyl.me 【失效】
 https://hub.uuuadc.top 【失效】
 https://dockerhub.jobcher.com【失效】
