@@ -52,3 +52,26 @@ SPACESHIP_TIME_SHOW="true" # 显示时间
 /**********/**********/**********/**********/**********/**********/
 
 ```
+
+
+### Mac上iterm2分屏切换
+```
+command + t：新建窗口
+
+command + d：垂直分屏，
+
+command + shift + d：水平分屏。
+
+command + ] 和command + [ 在最近使用的分屏直接切换.
+
+command + alt + 方向键：切换到指定位置的分屏。
+
+command + 数字：切换标签页。
+
+command + 方向键：按方向切换标签页。
+
+shift + command + s：保存当前窗口快照。
+
+command + alt + b：快照回放。
+
+```

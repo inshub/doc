@@ -38,3 +38,15 @@
 ```
 View -> Side Bar -> Show Side Bar
 ```
+
+### Package Control Commands 找不到
+新版本安装Package Control 找不到不能安装插件
+```
+/Users/xxx/Library/Application Support/Sublime Text/Installed Packages
+```
+下载package_control
+`https://github.com/wbond/package_control/releases`
+Rename the file to Package Control.sublime-package and copy it to Installed Packages.
+
+参考地址
+https://github.com/sublimehq/sublime_text/issues/6037

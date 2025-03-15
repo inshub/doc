@@ -29,3 +29,13 @@ npm安装pnpm
 npm install -g pnpm
 ```
 你可以用`pnpm env`命令安装Node.js,你两个就相互卷吧。
+
+pnpm安装node环境
+```
+查看node版本
+pnpm env list --remote
+安装node 22
+pnpm env  add --global 22.6.0
+使用node 22
+pnpm env  use  --global 22.6.0
+```
