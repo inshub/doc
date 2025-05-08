@@ -2,3 +2,4 @@
 /node_modules
 docs/.vitepress/cache/
 pnpm-lock.yaml
+.python-version
