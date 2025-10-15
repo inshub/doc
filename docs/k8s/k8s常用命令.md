@@ -1,6 +1,5 @@
 # k8s常用命令
 
-
 #### kubeadm常用命令
 ```
 kubeadm init 启动一个 Kubernetes 主节点
@@ -57,6 +56,25 @@ kubectl create namespace test-ns
 ```
 
 
+
+### kubectl自动补全
+```
+# 在 Linux 上安装 bash 补全
+## 如果 Linux 上未安装 bash-completion，请通过发行版的包管理器安装 "bash-completion" 包。
+## 将 bash 的 kubectl 补全代码加载到当前 shell 中
+source <(kubectl completion bash)
+## 将 bash 补全代码写入文件并从 .bash_profile 中引用之
+kubectl completion bash > ~/.kube/completion.bash.inc
+printf "
+# kubectl shell completion
+source '$HOME/.kube/completion.bash.inc'
+" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
+
+
+
+
 ### 如何获取kubelet当前配置
 ```
 先启动代理
@@ -88,3 +106,4 @@ nodefs就是指kubernetes node节点的根目录吧，即文件系统的/目录�
 ### 参考地址
 https://kubernetes.io/zh-cn/docs/reference/command-line-tools-reference/kubelet/ <br/>
 https://kubernetes.io/zh-cn/docs/tasks/administer-cluster/kubelet-config-file/
+https://kubernetes.io/zh-cn/docs/reference/kubectl/generated/kubectl_completion/
