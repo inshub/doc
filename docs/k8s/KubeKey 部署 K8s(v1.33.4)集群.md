@@ -1,11 +1,17 @@
 # KubeKey 部署 K8s(v1.33.4)集群
 
 ### 环境信息
-ip  主机名 系统版本
-192.168.1.100 k8s-test-master centos8/rhel8
-192.168.1.101 k8s-test-node1  centos8/rhel8
-192.168.1.102 k8s-test-node2  centos8/rhel8
+|   ip    | 主机名       |    系统版本/内核     |
+| --- | --- | --- |
+|   192.168.1.100    |   k8s-test-master    |  centos8/rhel8     |
+|   192.168.1.101    |   k8s-test-node1    |  centos8/rhel8    |
+|   192.168.1.102    |   k8s-test-node2     |  centos8/rhel8     |
 
+```
+系统内核版本，最少为4.19
+Recommended LTS version from the 4.x series is 4.19. Any 5.x or 6.x versions are also supported.
+ For cgroups v2 support, the minimal version is 4.15 and the recommended version is 5.8+
+```
 
 ### 基础配置
 
@@ -102,6 +108,8 @@ export KKZONE=cn
 ./kk create cluster -f k8s-v1334.yaml
 
 
+删除cluster
+./kk delete cluster -f k8s-v1334.yaml
 
 ...
 
@@ -150,6 +158,19 @@ curl 192.168.1.100:31440
 
 ```
 
+
+### KubeKey添加删除节点
+
+```
+添加新节点
+./kk add nodes -f k8s-v1334.yaml
+
+
+删除节点
+./kk delete node k8s-test-node3 -f k8s-v1334.yaml
+```
+
+
 ### 问题汇总
 
 问题描述：
@@ -166,5 +187,13 @@ To see the stack trace of this error execute with --v=5 or higher: Process exite
 
 
 ### 参考地址
+kubekey
 https://github.com/kubesphere/kubekey/blob/feature-gitops/README_zh-CN.md
+KubeKey 部署 K8s v1.28.8 实战
 https://kubesphere.io/zh/blogs/using-kubekey-deploy-k8s-v1.28.8/
+kubekey增加删除节点
+https://github.com/kubesphere/kubekey/blob/3.x/docs/commands/kk-add-nodes.md
+https://github.com/kubesphere/kubekey/blob/3.x/docs/commands/kk-delete-node.md
+
+
+
